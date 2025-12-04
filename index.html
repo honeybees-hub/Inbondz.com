@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inbondz</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-   
+
     <meta name="application-name" content="Inbondz">
     <script src="https://unpkg.com/lucide@latest/dist/lucide.min.js"></script>
 
@@ -15,27 +15,48 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Mobile-only indicator styles (simple white background, black text, with gap) -->
     <style>
-        .mobile-only{
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            gap:16px;
-            background:#ffffff;
-            color:#000000;
-            text-align:center;
-            padding:10px 14px;
-            font-weight:600;
-            flex-wrap:wrap;
+        .mobile-only {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            background: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 10px 14px;
+            font-weight: 600;
+            flex-wrap: wrap;
         }
-        .mobile-only a{
-            color:#000000;
-            text-decoration:none;
-            padding:6px 8px;
-            font-size:0.95rem;
+
+        .mobile-only a {
+            color: #000000;
+            text-decoration: none;
+            padding: 6px 8px;
+            font-size: 0.95rem;
         }
-        .mobile-only a:hover{ text-decoration:underline }
-        @media(min-width:768px){
-            .mobile-only{display:none}
+
+        .mobile-only a:hover {
+            text-decoration: underline
+        }
+
+        @media(min-width:768px) {
+            .mobile-only {
+                display: none
+            }
+        }
+
+        .typewriter-text {
+            color:  #057aff;
+            font-weight: bold;
+        }
+
+
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            background-color: #333;
+            animation: blink 0.7s infinite;
+            margin-left: 2px;
         }
     </style>
 </head>
@@ -55,23 +76,22 @@
                 <nav class="hidden md:flex space-x-8">
                     <a href="tools.html"
                         class="text-text-dark hover:text-cta-blue transition duration-150 font-medium">Tools</a>
-                    <a href="devtools.html"
-                        class="text-text-dark hover:text-cta-blue transition duration-150 font-medium">Dev
+                    <a href="devtools.html" class="text-text-dark hover:text-cta-blue transition duration-150 font-medium">Dev
                         Tools</a>
                     <a href="games.html"
                         class="text-text-dark hover:text-cta-blue transition duration-150 font-medium">Games </a>
-                    
+
                 </nav>
             </div>
         </div>
     </header>
 
     <!-- Mobile-only indicator -->
-    <div id="mobile-indicator" class="mobile-only" role="status" aria-hidden="false" >
+    <div id="mobile-indicator" class="mobile-only" role="status" aria-hidden="false">
         <a href="tools.html" class="text-text-dark hover:text-cta-blue transition duration-150 font-medium">Tools</a>
-        
+
         <a href="games.html" class="text-text-dark hover:text-cta-blue transition duration-150 font-medium">Games </a>
-        
+
     </div>
 
     <main>
@@ -81,14 +101,14 @@
                 <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tighter text-text-dark">
                     The Next Evolution of Digital Tools
                 </h1>
-                <p class="mt-4 text-lg sm:text-xl text-text-muted-dark max-w-2xl mx-auto" style="color: green;">
-                    
-                </p>
+
+                <h1 style="margin-top: 25px; font-size: 47px; font-weight: bold;">
+                    <span class="typewriter-text"></span><span class="cursor">&nbsp;</span>
+                </h1>
+
                 <div class="mt-8 flex justify-center space-x-4">
 
-                    <!-- <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-semibold rounded-lg shadow-xl text-white bg-cta-blue hover:bg-cyan-700 transition duration-300 transform hover:scale-105">
-                        Get Started - Free
-                    </a> -->
+                    
                     <a href="tools.html"
                         class="inline-flex items-center px-6 py-3 border border-border-light text-base font-semibold rounded-lg text-text-dark hover:bg-secondary-bg transition duration-300"
                         style="color: white; background-color:  #055e6c;">
@@ -111,17 +131,20 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     <!-- Feature 1: Payment Gateway (Animated) -->
-                   <a href="£"> <div class="bg-primary-bg p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer"
-                        style="background-color: #3a3a3a; color: #fff;">
-                        <!-- Icon Color Updated -->
-                        <div
-                            class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4">
-                            <i data-lucide="zap" class="w-6 h-6"></i>
+                    <a href="£">
+                        <div class="bg-primary-bg p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer"
+                            style="background-color: #3a3a3a; color: #fff;">
+                            <!-- Icon Color Updated -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4">
+                                <i data-lucide="zap" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-text-dark" style="color: yellow;">Screen Recoder
+                            </h3>
+                            <p class="text-text-muted-dark text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint atque hic!</p>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-text-dark" style="color: yellow;">Screen Recoder</h3>
-                        <p class="text-text-muted-dark text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint atque hic!</p>
-                    </div></a>
+                    </a>
 
                     <!-- Feature 2: Payroll & Payouts (Animated) -->
                     <div class="bg-primary-bg p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer"
@@ -201,7 +224,7 @@
                             View Dev Tools <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -215,11 +238,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <!-- Col 1: Logo & Mission ("Inbondz" and color updated) -->
-               
+
 
                 <!-- Col 2: Products -->
                 <div>
-                    
+
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="contact.html" class="hover:text-cta-blue">Contact Us</a></li>
                         <li><a href="privacy-policy.html" class="hover:text-cta-blue">Privacy Policy</a></li>
@@ -228,7 +251,7 @@
                     </ul>
                 </div>
 
-              
+
             </div>
 
             <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
@@ -242,6 +265,54 @@
     <!-- Initialize Lucide Icons -->
     <script>
         lucide.createIcons();
+    </script>
+    <script>
+
+        const words = ['Thumbnail Downloader', 'JSON Formatter', 'Image Compressor', 'Image Enhancer' ,'QR Code Generator','Text Styler', 'Tic Tac Toe'];
+
+        const textElement = document.querySelector('.typewriter-text');
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 150;
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+
+                textElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+
+                textElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 150; // টাইপ করার সময় নরমাল স্পিড
+            }
+
+            // যদি পুরো শব্দ টাইপ করা শেষ হয়
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // শব্দ শেষ হলে ২ সেকেন্ড অপেক্ষা করবে
+            }
+            // যদি পুরো শব্দ মুছে ফেলা শেষ হয়
+            else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex++;
+                typeSpeed = 500; // নতুন শব্দ শুরুর আগে একটু বিরতি
+
+                // সব শব্দ শেষ হলে আবার শুরু থেকে লুপ হবে
+                if (wordIndex === words.length) {
+                    wordIndex = 0;
+                }
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // এনিমেশন শুরু করুন
+        document.addEventListener('DOMContentLoaded', typeEffect);
     </script>
 </body>
 
