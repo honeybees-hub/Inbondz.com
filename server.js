@@ -1,5 +1,4 @@
 //server.js
-document.addEventListener('DOMContentLoaded', () => {
 	const searchKey = document.getElementById('search-input');
 	const button = document.getElementById('search-button');
 
@@ -44,4 +43,3 @@ document.addEventListener('DOMContentLoaded', () => {
 			searchNews();
 		}
 	});
-});
