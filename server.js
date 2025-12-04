@@ -25,7 +25,7 @@ function searchNews() {
             }
 
 
-             if (searchText === "qr"){
+             if (searchText === "qr","qrcode","qrcodegenerator"){
                 
                 window.location.href = `https://qrgenerator.inbondz.com`;
 
