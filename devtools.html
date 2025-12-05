@@ -11,7 +11,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -39,52 +39,25 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #000000;
+            background-color: #000000; 
             color: #e0e0e0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             overflow-x: hidden;
             min-height: 100vh;
         }
 
-        /* --- STAR BACKGROUND STYLES --- */
-        .stars-container {
+        /* --- CANVAS BACKGROUND STYLES --- */
+        #bgCanvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            /* Behind everything */
-            pointer-events: none;
+            z-index: -1; /* Behind everything */
         }
-
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.4);
-            animation: twinkle var(--duration) infinite ease-in-out;
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: 0.3;
-                transform: scale(0.8);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-        }
-
-        /* Ensure links/buttons are clickable over stars */
-        main,
-        header,
-        footer {
+        
+        /* Ensure links/buttons are clickable over canvas */
+        main, header, footer {
             position: relative;
             z-index: 10;
         }
@@ -93,8 +66,8 @@
 
 <body class="antialiased">
 
-    <!-- STAR BACKGROUND CONTAINER -->
-    <div class="stars-container" id="starsContainer"></div>
+    <!-- NEW CANVAS BACKGROUND -->
+    <canvas id="bgCanvas"></canvas>
 
     <header class="sticky top-0 z-50 bg-primary-bg/80 backdrop-blur-md shadow-md border-b border-border-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,115 +85,58 @@
                 <h2 class="text-3xl font-bold text-center mb-12 text-text-dark">Our Comprehensive Dev Tools</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+                    
                     <!-- Card 1 -->
                     <a href="https://tictactoe.inbondz.com">
-                        <!-- UPDATED: bg-transparent, removed backdrop-blur -->
-                        <div
-                            class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
+                        <div class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
                             <!-- Glow effect behind card on hover (kept for interactivity, invisible by default) -->
-                            <div
-                                class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            </div>
-
-                            <div
-                                class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
+                            <div class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
                                 <span class="font-mono font-bold text-lg tracking-tighter">&lt;/&gt;</span>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">
-                                Tic Tac Toe</h3>
-                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint
-                                atque hic!</p>
+                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">Tic Tac Toe</h3>
+                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint atque hic!</p>
                         </div>
                     </a>
                     <a href="https://tictactoe.inbondz.com">
-                        <!-- UPDATED: bg-transparent, removed backdrop-blur -->
-                        <div
-                            class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
+                        <div class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
                             <!-- Glow effect behind card on hover (kept for interactivity, invisible by default) -->
-                            <div
-                                class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            </div>
-
-                            <div
-                                class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
+                            <div class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
                                 <span class="font-mono font-bold text-lg tracking-tighter">&lt;/&gt;</span>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">
-                                Tic Tac Toe</h3>
-                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint
-                                atque hic!</p>
+                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">Tic Tac Toe</h3>
+                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint atque hic!</p>
                         </div>
                     </a>
                     <a href="https://tictactoe.inbondz.com">
-                        <!-- UPDATED: bg-transparent, removed backdrop-blur -->
-                        <div
-                            class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
+                        <div class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
                             <!-- Glow effect behind card on hover (kept for interactivity, invisible by default) -->
-                            <div
-                                class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            </div>
-
-                            <div
-                                class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
+                            <div class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
                                 <span class="font-mono font-bold text-lg tracking-tighter">&lt;/&gt;</span>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">
-                                Tic Tac Toe</h3>
-                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint
-                                atque hic!</p>
+                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">Tic Tac Toe</h3>
+                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint atque hic!</p>
                         </div>
                     </a>
                     <a href="https://tictactoe.inbondz.com">
-                        <!-- UPDATED: bg-transparent, removed backdrop-blur -->
-                        <div
-                            class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
+                        <div class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
                             <!-- Glow effect behind card on hover (kept for interactivity, invisible by default) -->
-                            <div
-                                class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            </div>
-
-                            <div
-                                class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
+                            <div class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
                                 <span class="font-mono font-bold text-lg tracking-tighter">&lt;/&gt;</span>
                             </div>
-                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">
-                                Tic Tac Toe</h3>
-                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint
-                                atque hic!</p>
-                        </div>
-                    </a>
-                    <a href="https://tictactoe.inbondz.com">
-                        <!-- UPDATED: bg-transparent, removed backdrop-blur -->
-                        <div
-                            class="bg-transparent p-6 rounded-xl shadow-lg border border-border-light hover:border-cta-blue transition duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer h-full relative group">
-                            <!-- Glow effect behind card on hover (kept for interactivity, invisible by default) -->
-                            <div
-                                class="absolute inset-0 bg-cta-blue/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            </div>
-
-                            <div
-                                class="flex items-center justify-center w-12 h-12 rounded-full bg-cta-blue/20 text-cta-blue mb-4 relative z-10">
-                                <span class="font-mono font-bold text-lg tracking-tighter">&lt;/&gt;</span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">
-                                Tic Tac Toe</h3>
-                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint
-                                atque hic!</p>
+                            <h3 class="text-xl font-semibold mb-2 text-text-dark relative z-10" style="color: yellow;">Tic Tac Toe</h3>
+                            <p class="text-text-muted-dark text-sm relative z-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor distinctio nisi voluptatem quia nesciunt eius sint atque hic!</p>
                         </div>
                     </a>
 
-
-
-
-
-
-
+                  
 
                 </div>
             </div>
@@ -233,10 +149,8 @@
                 <div>
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="contact.html" class="hover:text-cta-blue transition-colors">Contact Us</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-cta-blue transition-colors">Privacy
-                                Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-cta-blue transition-colors">Terms of
-                                Service</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-cta-blue transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-cta-blue transition-colors">Terms of Service</a></li>
                         <li><a href="index.html" class="hover:text-cta-blue transition-colors">Home</a></li>
                     </ul>
                 </div>
@@ -250,49 +164,169 @@
         </div>
     </footer>
 
-    <!-- Star Logic -->
+    <!-- Interactive Particle Network Logic -->
     <script>
-        // Configuration
-        const STAR_COUNT = 300;
-        const container = document.getElementById('starsContainer');
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        let particlesArray;
+        let animationId;
 
-        function createStars() {
-            for (let i = 0; i < STAR_COUNT; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
+        // Resize Canvas to fill screen
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            init(); // Re-init particles on resize
+        });
+        resizeCanvas();
 
-                // Random Position
-                const x = Math.random() * 100;
-                const y = Math.random() * 100;
+        // Mouse interaction
+        let mouse = {
+            x: null,
+            y: null,
+            radius: 100 // Radius for connection interaction
+        }
 
-                // Random Size
-                const size = Math.random() < 0.9 ? Math.random() * 2 : Math.random() * 3.5;
+        window.addEventListener('mousemove', function(event) {
+            mouse.x = event.x;
+            mouse.y = event.y;
+        });
+        
+        // Handle mouse out
+        window.addEventListener('mouseout', function() {
+            mouse.x = undefined;
+            mouse.y = undefined;
+        });
 
-                // Random Animation Duration
-                const duration = 2 + Math.random() * 4;
-                const delay = Math.random() * 5;
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+            
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = '#ffffff'; // White particles
+                ctx.fill();
+            }
+            
+            update() {
+                // Bounce off edges
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
 
-                star.style.left = `${x}%`;
-                star.style.top = `${y}%`;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                star.style.setProperty('--duration', `${duration}s`);
-                star.style.animationDelay = `${delay}s`;
+                // Move
+                this.x += this.directionX;
+                this.y += this.directionY;
 
-                // Add slight color variation
-                const tint = Math.random();
-                if (tint > 0.8) star.style.backgroundColor = '#b0d7ff'; // Blueish
-                else if (tint < 0.1) star.style.backgroundColor = '#fff4b0'; // Yellowish
+                // Mouse interactivity (optional: particles flee from mouse slightly)
+                // Uncomment below to enable repulsion
+                /*
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                if (distance < mouse.radius + this.size){
+                    if(mouse.x < this.x && this.x < canvas.width - this.size * 10){
+                        this.x += 1;
+                    }
+                    if(mouse.x > this.x && this.x > this.size * 10){
+                        this.x -= 1;
+                    }
+                    if(mouse.y < this.y && this.y < canvas.height - this.size * 10){
+                        this.y += 1;
+                    }
+                    if(mouse.y > this.y && this.y > this.size * 10){
+                        this.y -= 1;
+                    }
+                }
+                */
 
-                container.appendChild(star);
+                this.draw();
             }
         }
 
-        createStars();
+        function init() {
+            particlesArray = [];
+            // Number of particles based on screen size
+            let numberOfParticles = (canvas.height * canvas.width) / 15000;
+            
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 0.5; 
+                let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+                // Random speed
+                let directionX = (Math.random() * 0.4) - 0.2; 
+                let directionY = (Math.random() * 0.4) - 0.2;
+                let color = '#ffffff';
 
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        // Draw lines between particles that are close
+        function connect() {
+            let opacityValue = 1;
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + 
+                                   ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                    
+                    // Connection distance threshold
+                    if (distance < (canvas.width/9) * (canvas.height/9)) { 
+                        opacityValue = 1 - (distance/20000); 
+                        // Make lines subtle
+                        ctx.strokeStyle = 'rgba(255,255,255,' + (opacityValue * 0.2) + ')'; 
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                        ctx.stroke();
+                    }
+                }
+                
+                // Connect to mouse
+                if (mouse.x != undefined) {
+                     let distance = ((particlesArray[a].x - mouse.x) * (particlesArray[a].x - mouse.x)) + 
+                                    ((particlesArray[a].y - mouse.y) * (particlesArray[a].y - mouse.y));
+                    if (distance < 20000) {
+                        ctx.strokeStyle = 'rgba(59, 130, 246, 0.3)'; // cta-blue tint for mouse connections
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            animationId = requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+            }
+            connect();
+        }
+
+        init();
+        animate();
+        
         // Initialize Lucide icons
         lucide.createIcons();
     </script>
 </body>
-
 </html>
