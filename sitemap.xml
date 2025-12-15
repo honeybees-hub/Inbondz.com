@@ -1,63 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-   <url>
-    <loc>https://insideout.bond/</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/tools.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/devtools.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/games.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Tools/magic-enhancer.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Tools/ytthumbnailextractor.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Tools/qr-generator.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/contact.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/privacy-policy.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/terms-of-service.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/index.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Tools/Gst-calculetor.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Devtools/json-formatter.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Devtools/Screen-Recorder.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Games/Tic-Tac-Toe.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Games/flappy-bird.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Games/Dino-game.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Games/word-chain.html</loc>
-</url>
-<url>
-    <loc>https://insideout.bond/Games/Neon-defender.html</loc>
-</url>
-   
-
+    <url>
+        <loc>https://insideout.bond/</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/tools.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/devtools.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/games.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Tools/magic-enhancer.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Tools/ytthumbnailextractor.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Tools/qr-generator.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/contact.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/privacy-policy.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/terms-of-service.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/index.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Tools/Gst-calculetor.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Devtools/json-formatter.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Devtools/Screen-Recorder.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Games/Tic-Tac-Toe.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Games/flappy-bird.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Games/Dino-game.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Games/word-chain.html</loc>
+    </url>
+    <url>
+        <loc>https://insideout.bond/Games/Neon-defender.html</loc>
+    </url>
 </urlset>
